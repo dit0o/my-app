@@ -1,5 +1,5 @@
 import React, { createElement } from "react";
-import Navbar from "./Components/Navbar";
+
 import Home from "./Pages/Home";
 import Product from "./Pages/Product";
 import About from "./Pages/About";
@@ -9,6 +9,9 @@ import RootLayout from "./layout/RootLayout";
 import ContactLayout from "./layout/ContactLayout";
 import ContactInfo from "./Components/ContactInfo";
 import ContactForm from "./Components/contactForm";
+import NotFound from "./Components/NotFound";
+import JobsLayout from "./layout/JobsLayout";
+import Jobs, { jobsLoader } from "./Pages/Jobs";
 
 
 const App=(()=>{
@@ -23,6 +26,10 @@ const App=(()=>{
       <Route path="info" element={<ContactInfo/>}/>
       <Route path="form" element={<ContactForm/>}/>
 </Route>
+<Route path="jobs" element={<JobsLayout/>}>
+  <Route index element={<Jobs/>} loader={jobsLoader}/>
+</Route>
+<Route path="*" element={<NotFound/>}/> 
       </Route>
     )
   )

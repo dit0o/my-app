@@ -12,6 +12,7 @@ const Navbar = () => {
                <NavLink to={"/about"}><li>About</li></NavLink> 
                <NavLink to={"/products"}><li>Product</li></NavLink> 
                <NavLink to={"/contact"}><li>Contact</li></NavLink> 
+               <NavLink to={"/Jobs"}><li>Jobs</li></NavLink> 
 
             </ul>
             <button onClick={()=>navigate('/about',{replace:true})}>Get Started</button>
