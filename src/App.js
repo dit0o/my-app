@@ -29,7 +29,7 @@ const App=(()=>{
 </Route>
 <Route path="jobs" element={<JobsLayout/>}>
   <Route index element={<Jobs/>} loader={jobsLoader}/>
-  <Route path=":id" element={<JobDetailes/>} loader={<JobDetailes/>}/>
+  <Route path=":id" element={<JobDetailes/>} loader={<JobDetailes/>} errorElement={<Error/>}/>
 </Route>
 
 <Route path="*" element={<NotFound/>}/> 
